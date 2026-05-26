@@ -1,0 +1,905 @@
+[
+  {
+    "id": "agoda_artistic_stay_finder",
+    "prompt": "I'm looking for a place to stay in Kyoto from Friday to Sunday next weekend. I'd like a hotel that looks nice in the photos, but also seems to be described by actual guests as quiet and cozy. Rather than a bright, family-oriented hotel, please choose a calm and atmospheric stay.",
+    "task_type": "Contextual Inference",
+    "start_url": "https://www.agoda.com/",
+    "user_intent": "The user wants to find hotels on Agoda in Kyoto that are available from Friday to Sunday next weekend, where the photos suggest a good atmosphere and actual guest reviews also indicate quietness and coziness. They prefer a calm, atmospheric property over a bright, family-oriented one, and need to choose a final candidate by considering both photo and review cues together.",
+    "evidence_checks": [
+      "Confirming that a Kyoto accommodation candidate’s name appears on Agoda search results or on its detail page",
+      "Is the stay period established as Friday through Sunday next weekend, or is availability for that window verified?",
+      "Evidence showing that at least one photo, the title, or the description of the candidate accommodation contains cues that can be tied to the user’s preferences, including calmness, atmosphere, or coziness",
+      "Does the candidate accommodation’s review content indicate that real guests used terms such as quiet, cozy, comfortable, atmospheric, or similar wording?",
+      "If the candidate accommodation is assessed, is it confirmed to resemble the kind of atmosphere the user wants to avoid, such as bright and family-oriented, kid-friendly, or geared toward group tourists?",
+      "Visually, it is confirmed that the final selection relied on more than just accommodations with attractive photos, and instead drew on multiple factors such as photos and guest reviews"
+    ]
+  },
+  {
+    "id": "rottentomatoes_certified_fresh_creator",
+    "prompt": "Find a TV show that has the Certified Fresh badge and go to its detail page. Tell me who created it.",
+    "task_type": "Visual Grounding",
+    "start_url": "https://www.rottentomatoes.com/",
+    "user_intent": "The user wants to find a TV show with a Certified Fresh badge on Rotten Tomatoes and check the creator information on its detail page.",
+    "evidence_checks": [
+      "Verifying that the candidate TV show's title is confirmed in the TV show list, the search results, or the detail page",
+      "Is a Certified Fresh badge or Certified Fresh indicator visible on the screen for the candidate TV show?",
+      "The detail page for the candidate bearing the Certified Fresh indication has been opened",
+      "If the detail page is shown, is a creator-related field such as Created by, Creator, Creators, or Produced by visible there?",
+      "Visually, the creator's name appears on the detail page"
+    ]
+  },
+  {
+    "id": "ecma262_freeze_desc",
+    "prompt": "Can you find me an explanation of the JavaScript function that, after you create an object, freezes it solid so other developers can’t just mess with or delete the features that were already there?",
+    "task_type": "Semantic Grounding",
+    "start_url": "https://tc39.es/ecma262/",
+    "user_intent": "The user wants to confirm in the ECMAScript spec that the function that prevents an object's properties from being changed or deleted is Object.freeze().",
+    "evidence_checks": [
+      "Confirming that the Object.freeze or Object.freeze() section appears in the ECMA-262 document",
+      "Is terminology tied to object freezing—such as freeze, frozen object, and SetIntegrityLevel—confirmed?",
+      "The presence of explanations about limits on modification or deletion, including property changes, deletion, extensible, writable, and configurable, is confirmed",
+      "If the Object.freeze method’s algorithm or return-behavior description is present, that counts as confirmed evidence",
+      "Visibly, evidence that the relevant section was reached through search, the table of contents, in-document find, or a similar method is confirmed"
+    ]
+  },
+  {
+    "id": "atlas_obscura_outdoor_photo_cue",
+    "prompt": "On Atlas Obscura, find a place that looks like an outdoor or nature-based spot rather than an indoor museum. Choose it based on the card image or map/photo cues, and briefly explain what visual evidence you used.",
+    "task_type": "Visual Grounding",
+    "start_url": "https://www.atlasobscura.com/",
+    "user_intent": "The user wants to use image clues on Atlas Obscura to identify items that appear to be outdoor or nature-based places rather than indoor museums.",
+    "evidence_checks": [
+      "Confirming whether the card image or detail image shows visual signs of an outdoor setting, such as scenery, nature, paths, mountains, parks, or historic sites,",
+      "Was the location avoided as an outdoor spot if that conclusion came only from its name?",
+      "If a candidate seemed like an indoor exhibition hall or museum, was it excluded in the absence of visual evidence?"
+    ]
+  },
+  {
+    "id": "roadtrippers_scenic_stop_image",
+    "prompt": "On Roadtrippers, look for a stop that visually seems scenic or photo-worthy. Pick one using the image preview, not just the place name, and tell me what visual clue made it look scenic.",
+    "task_type": "Visual Grounding",
+    "start_url": "https://roadtrippers.com/",
+    "user_intent": "The user wants to choose places on Roadtrippers that look scenic or good for taking photos by viewing image previews, not just names.",
+    "evidence_checks": [
+      "Checking whether the preview images were examined for visual signals like views, natural scenery, landmarks, or distinctive exteriors",
+      "Verifying that a candidate was chosen because it looked worth visiting from the image by itself, even if no text description was provided",
+      "Confirming that the stop was not deemed scenic solely on the basis of its rating or place name"
+    ]
+  },
+  {
+    "id": "common_sense_media_age_icon_pick",
+    "prompt": "On Common Sense Media, find a movie or show that looks appropriate for younger kids by checking the age rating badge or visual age marker. Do not choose based only on the poster.",
+    "task_type": "Visual Grounding",
+    "start_url": "https://www.commonsensemedia.org/",
+    "user_intent": "The user wants to choose child-appropriate content on Common Sense Media based on age badges or visual rating indicators, not posters.",
+    "evidence_checks": [
+      "Checking for a visual cue such as an age-rating badge, age marker, or rating icon on the card or detail page",
+      "Is the selection made without relying solely on the poster’s appearance to infer it is for children",
+      "The avoidance of items whose age indicators suggest they are aimed at teens or older"
+    ]
+  },
+  {
+    "id": "chairish_vintage_style_image_cue",
+    "prompt": "On Chairish, find a furniture item that visually looks vintage or antique. Base your choice on the product photo style, material, shape, or visual design cues rather than only the category text.",
+    "task_type": "Visual Grounding",
+    "start_url": "https://www.chairish.com/",
+    "user_intent": "The user wants to identify furniture with a vintage or antique feel on Chairish based on product photo cues such as shape, material, color, and design.",
+    "evidence_checks": [
+      "Confirming that the product photo showed vintage-style visual signals, including an aged material feel, classic form, ornamentation, and color tone",
+      "Verifying that the vintage judgment was not made solely from the category name or product name",
+      "Checking that an item with a modern, minimalist look was not chosen by mistake"
+    ]
+  },
+  {
+    "id": "saatchi_art_color_mood_visual",
+    "prompt": "On Saatchi Art, find an artwork that visually feels calm and minimal. Choose it based on colors, empty space, composition, or image style—not just the artwork title.",
+    "task_type": "Visual Grounding",
+    "start_url": "https://www.saatchiart.com/",
+    "user_intent": "The user wants to choose an artwork on Saatchi Art that looks calm and minimalist based on visual cues such as color, negative space, and composition rather than the title.",
+    "evidence_checks": [
+      "Confirming that the artwork image showed visual signals like a sparse composition, limited colors, generous whitespace, and muted tones",
+      "Is there evidence that the artwork was not considered calm or minimal solely because of its title",
+      "The absence of any selection of a complex artwork with vivid colors as a candidate satisfying the conditions"
+    ]
+  },
+  {
+    "id": "inaturalist_identify_bird_photo",
+    "prompt": "On iNaturalist, find an observation that visually appears to be a bird. Use the observation photo as the main evidence, not only the species name or category.",
+    "task_type": "Visual Grounding",
+    "start_url": "https://www.inaturalist.org/",
+    "user_intent": "The user wants to view observation photos on iNaturalist and select the observation item that looks like a bird.",
+    "evidence_checks": [
+      "Confirming that the observation photo shows visual cues like a beak, wings, feathers, and a bird-like form?",
+      "Was the decision against it being a bird made without relying solely on the species name or classification text?",
+      "Look for whether items resembling insect, mammal, or plant photos were avoided as mistaken selections?"
+    ]
+  },
+  {
+    "id": "ikea_small_apartment_guest_sleeping",
+    "prompt": "My apartment is tiny, but my cousin sometimes sleeps over. On IKEA, find a furniture option that can help with occasional guests without taking over the room.",
+    "task_type": "Contextual Inference",
+    "start_url": "https://www.ikea.com/us/en/",
+    "user_intent": "The user wants a space-saving furniture solution for occasional overnight guests in a small apartment.",
+    "evidence_checks": [
+      "A suitable compact guest-sleeping furniture type was inferred and identified.",
+      "The product page or listing confirmed that the item can function as a sleeping option without dominating the room during everyday use",
+      "The recommendation considered visible product details such as product name, price, dimensions, functional description, or small-space suitability"
+    ]
+  },
+  {
+    "id": "weather_hourly_rain_chance_synonym",
+    "prompt": "On the National Weather Service site, I want to check the hour-by-hour rain chance for Denver today, not just the general daily outlook.",
+    "task_type": "Semantic Grounding",
+    "start_url": "https://www.weather.gov/",
+    "user_intent": "The user says 'hour-by-hour rain chance', which should be mapped to hourly forecast / detailed forecast weather UI rather than only the main forecast summary.",
+    "evidence_checks": [
+      "Checking whether the National Weather Service page had been opened to Denver or to the matching local forecast page",
+      "Does the user's phrase \"hour-by-hour rain chance\" correspond to an hourly or detailed forecast-style interface instead of the daily forecast?",
+      "Evidence of an hourly forecast, including chance of precipitation by time period, weather conditions, and temperature, should be visible on the screen"
+    ]
+  },
+  {
+    "id": "weather_warning_board_alerts_synonym",
+    "prompt": "On the National Weather Service site, show me whether there is any storm warning board active around Oklahoma City right now.",
+    "task_type": "Semantic Grounding",
+    "start_url": "https://www.weather.gov/",
+    "user_intent": "The user says 'storm warning board', which should be mapped to weather alerts, warnings, watches, or advisories.",
+    "evidence_checks": [
+      "Confirming that the Oklahoma City page, or a nearby-area weather page, was consulted on the National Weather Service screen",
+      "Does the screen link the user's phrase \"storm warning board\" to the alerts/warnings/watches/advisories UI?",
+      "The screen's confirmation of whether any warnings/advisories are active right now, or whether none are present"
+    ]
+  },
+  {
+    "id": "datagov_newly_uploaded_public_data_synonym",
+    "prompt": "On Data.gov, find some newly uploaded public data about transportation, not the most popular old stuff.",
+    "task_type": "Semantic Grounding",
+    "start_url": "https://catalog.data.gov/",
+    "user_intent": "The user says 'newly uploaded public data', which should be mapped to dataset search with recent/recently added sorting or harvested date.",
+    "evidence_checks": [
+      "Confirming that the Data.gov catalog was searched for transportation-related datasets",
+      "Does the user phrase 'newly uploaded' correspond to a recently added, modified, harvested, or date-based sort or filter option in the UI?",
+      "The verification of recency and topical fit through screen-level clues such as the dataset title, organization, metadata dates, and topic tags"
+    ]
+  },
+  {
+    "id": "datagov_map_ready_data_synonym",
+    "prompt": "On Data.gov, find map-ready climate data. I mean something that looks usable for geographic analysis, not just a PDF report.",
+    "task_type": "Semantic Grounding",
+    "start_url": "https://catalog.data.gov/",
+    "user_intent": "The user says 'map-ready data', which should be mapped to geospatial datasets or spatial data filters.",
+    "evidence_checks": [
+      "Checking whether the Data.gov catalog was queried for climate-related datasets",
+      "Determining whether the user's phrase 'map-ready' was translated into a Geospatial or spatial data filter or option in the UI",
+      "Verifying that the candidate dataset is a geospatial or spatial resource, not a PDF report, using screen-level evidence such as format, tags, or metadata"
+    ]
+  },
+  {
+    "id": "arxiv_ai_papers_uploaded_lately_synonym",
+    "prompt": "On arXiv, find AI papers uploaded lately about visual agents, not the all-time search results.",
+    "task_type": "Semantic Grounding",
+    "start_url": "https://arxiv.org/",
+    "user_intent": "The user says 'uploaded lately', which should be mapped to recent arXiv listings or date-based search, especially in categories such as cs.AI, cs.CV, or cs.CL if relevant.",
+    "evidence_checks": [
+      "Confirming that a search or browse was carried out in a relevant arXiv archive or category for papers about visual agents",
+      "Verifying whether the phrase 'uploaded lately' was interpreted as recent submissions, submitted date, announced date, or a latest-listing UI element on arXiv",
+      "Evidence showing that these are recent AI papers should be visible at the screen level, including details such as the paper title, authors, submission/update date, and category"
+    ]
+  },
+  {
+    "id": "arxiv_not_peer_reviewed_preprint_synonym",
+    "prompt": "On arXiv, find a not-yet-journal style machine learning paper about diffusion models, preferably from the recent listings.",
+    "task_type": "Semantic Grounding",
+    "start_url": "https://arxiv.org/",
+    "user_intent": "The user says 'not-yet-journal style paper', which should be mapped to arXiv preprints/e-prints rather than peer-reviewed journal publication pages.",
+    "evidence_checks": [
+      "Checking whether arXiv was searched and whether results connected to diffusion models or machine learning were obtained",
+      "Does the phrase 'not-yet-journal style' get interpreted in the arXiv preprint/e-print sense instead of as a peer-reviewed journal?",
+      "Evidence from the screen on an arXiv preprint page — for example the title, arXiv category tag, submitted date, and abstract — was verified"
+    ]
+  },
+  {
+    "id": "uscis_f1_married_multi",
+    "prompt": "I'm an F-1 student currently in the US and I recently married a US citizen. On USCIS, find the process I would use to apply for a green card without leaving the US, and the family petition my spouse needs to file for me. Tell me the relevant process names and USCIS form numbers.",
+    "task_type": "Contextual Inference",
+    "start_url": "https://www.uscis.gov/",
+    "user_intent": "The user wants to combine the conditions 'F-1 student currently in the US' and 'marriage to a US citizen' on USCIS to confirm the process for applying for a green card within the United States, as well as the process name and form number of the family petition the spouse must submit.",
+    "evidence_checks": [
+      "Confirming that USCIS site information tied to a green card through family, a spouse of a U.S. citizen, or an immediate relative appeared on screen",
+      "Is Adjustment of Status the process used to apply for a green card from inside the United States?",
+      "The form linked to Adjustment of Status, Form I-485, was identified",
+      "If the U.S. citizen spouse must file the family petition, was the Petition for Alien Relative confirmed as that petition?",
+      "Specifically, Form I-130 was identified as the form connected to the Petition for Alien Relative"
+    ]
+  },
+  {
+    "id": "nasa_space_updates_not_about_page_synonym",
+    "prompt": "On NASA, find the newest space update about Mars missions. I do not want the general About NASA page.",
+    "task_type": "Semantic Grounding",
+    "start_url": "https://www.nasa.gov/",
+    "user_intent": "The user says 'newest space update', which should be mapped to NASA News / Missions / Mars content rather than general About pages.",
+    "evidence_checks": [
+      "Checking whether the NASA page included a news or update area tied to Mars or a mission",
+      "Does the wording \"newest update\" from the user get linked to interface labels like News, latest stories, or mission updates?",
+      "Confirming that the visible clues needed to judge it as the latest update were examined, including the publication date, title, mission or topic tag, and relevance to Mars"
+    ]
+  },
+  {
+    "id": "noaa_ocean_weather_data_synonym",
+    "prompt": "On NOAA, find ocean weather information, not a general climate explainer. I need something that looks like actual marine forecast data.",
+    "task_type": "Semantic Grounding",
+    "start_url": "https://www.noaa.gov/",
+    "user_intent": "The user says 'ocean weather information', which should be mapped to marine forecasts, oceanic/atmospheric data, or NOAA weather services.",
+    "evidence_checks": [
+      "Has the NOAA screen been navigated to marine forecast, ocean/weather data, or a related service?",
+      "Was the user's phrase 'actual marine forecast data' interpreted as a forecast/data UI rather than a general climate explainer?",
+      "Were data-like cues on the screen verified, such as region, forecast condition, and wind/wave/marine weather elements?"
+    ]
+  },
+  {
+    "id": "instructables_beginner_balcony_plant_project",
+    "prompt": "I want to make my tiny balcony feel nicer, but I am not handy and do not own many tools. On Instructables, find a beginner-friendly project that could work for a small balcony.",
+    "task_type": "Contextual Inference",
+    "start_url": "https://www.instructables.com/",
+    "user_intent": "The user wants an easy DIY project for improving a small balcony, requiring low tool burden and beginner suitability.",
+    "evidence_checks": [
+      "Confirming whether a balcony-, planter-, small garden-, outdoor decor-, or beginner DIY-related project was identified on the Instructables screen",
+      "Is there confirmation from clues that the candidate project suits a small balcony and does not call for too many tools or advanced skills?",
+      "The presence of on-screen evidence used to judge beginner-friendliness—such as the project title, image, difficulty rating, materials/tools list, and step count—was verified"
+    ]
+  },
+  {
+    "id": "instructables_renter_friendly_storage",
+    "prompt": "I rent my place, so I cannot drill into the walls, but my entryway is always messy. On Instructables, find a renter-friendly storage idea.",
+    "task_type": "Contextual Inference",
+    "start_url": "https://www.instructables.com/",
+    "user_intent": "The user wants a DIY entryway storage solution that requires no permanent wall modifications — such as a freestanding unit, adhesive-mounted organizer, or no-drill design — suitable for a rental home.",
+    "evidence_checks": [
+      "Checking whether an Instructables project tied to entryway storage, a shoe rack, an organizer, or something similar was found on screen, with terms like no-drill, renter-friendly, freestanding, or adhesive present.",
+      "Confirming that screen-level evidence — for example, the project title, materials list, or step instructions — shows the project does not call for drilling into walls or any permanent installation.",
+      "Verifying that the candidate project uses renter-safe approaches such as freestanding construction, adhesive mounting, or tension-based fixtures instead of screws, anchors, or studs."
+    ]
+  },
+  {
+    "id": "instructables_parent_child_weekend_project",
+    "prompt": "I want something simple to build with my 10-year-old this weekend. On Instructables, find a project that feels safe, fun, and not too advanced.",
+    "task_type": "Contextual Inference",
+    "start_url": "https://www.instructables.com/",
+    "user_intent": "The user wants a beginner-level, child-safe DIY project on Instructables that a parent and a 10-year-old can complete together in a weekend, without dangerous tools or advanced skills.",
+    "evidence_checks": [
+      "Confirming that a project on Instructables was found on screen and tagged or described with keywords like kids, family, beginner, weekend project, or craft",
+      "Is there screen-level evidence — for example, in the materials list, required tools, and step-by-step instructions — showing that the project does not use dangerous tools or processes such as power saws, soldering irons, complex wiring, or chemical adhesives?",
+      "The project’s suitability for a 10-year-old, as supported by evidence such as the project title, difficulty rating, number of steps, and the kinds of materials and tools listed, was verified"
+    ]
+  },
+  {
+    "id": "instructables_small_desk_organization",
+    "prompt": "My desk is tiny and I keep losing cables and small things. On Instructables, find a simple organization project that would help without taking up much space.",
+    "task_type": "Contextual Inference",
+    "start_url": "https://www.instructables.com/",
+    "user_intent": "The user wants a small-space desk organization DIY project for cables and small items.",
+    "evidence_checks": [
+      "Checking for projects on the Instructables screen that relate to desk organizers, cable management, small workspaces, minimal desks, and similar themes.",
+      "Does the candidate project show signs that it uses little space on a narrow desk while helping arrange cables and small items?",
+      "Evidence showing whether it is a simple organization project, such as the project title, image, materials, tools, and number of steps, should be present."
+    ]
+  },
+  {
+    "id": "ebay_authenticity_badge_sneakers_varied",
+    "prompt": "I'm browsing for Nike Dunk sneakers on eBay, but I only trust the listings with the little authenticity guarantee mark. Pick one where that badge is actually visible.",
+    "task_type": "Visual Grounding",
+    "start_url": "https://www.ebay.com/",
+    "user_intent": "The user wants a sneaker listing with a visible authenticity-protection visual marker, not just a normal sneaker listing.",
+    "visual_target": "Authenticity Guarantee badge/checkmark",
+    "evidence_checks": [
+      "Confirming that the eBay screen showed either Nike Dunk-related search results or a product detail page",
+      "Visual confirmation of an Authenticity Guarantee badge or checkmark appearing on the product card or detail view",
+      "It was not inferred that the listing had authenticity guarantee status solely from the product name, brand name, or price"
+    ]
+  },
+  {
+    "id": "ebay_designer_bag_blue_badge_varied",
+    "prompt": "For a used designer handbag on eBay, I want the one with the blue-looking protection badge, not a random luxury listing. Could you choose a result where that marker shows up?",
+    "task_type": "Visual Grounding",
+    "start_url": "https://www.ebay.com/",
+    "user_intent": "The user wants a used designer handbag listing selected by a visible authenticity/protection badge.",
+    "visual_target": "blue authenticity/protection badge",
+    "evidence_checks": [
+      "Confirming that the eBay screen showed a listing for a used designer handbag or luxury handbag",
+      "Is a blue authenticity/protection badge–type visual cue visible on the product card or detail screen?",
+      "The presence of a protection badge was not inferred solely from the brand name or a high price"
+    ]
+  },
+  {
+    "id": "booking_breakfast_marker_rome_varied",
+    "prompt": "I'm comparing Rome hotels on Booking.com and only want one where breakfast is visually marked on the listing or room card. Do not infer it from a vague description.",
+    "task_type": "Visual Grounding",
+    "start_url": "https://www.booking.com/",
+    "user_intent": "The user wants a Rome hotel selected only when breakfast inclusion is explicitly indicated on the listing — via a visible label, badge, icon, or room/rate option text — not inferred from a general property description.",
+    "visual_target": "explicit breakfast indicator: 'Breakfast included', 'Breakfast & dinner included', meal plan label on a room or rate card, or a dedicated breakfast amenity badge",
+    "evidence_checks": [
+      "Confirming that Rome hotel search results or a hotel detail page on Booking.com with listing cards visible had been opened or accessed",
+      "Is there an explicit breakfast cue on the listing card, room card, or rate option — such as a 'Breakfast included' label, meal plan tag, or breakfast amenity badge — instead of a vague reference buried in the property description?",
+      "The specific text or UI element indicating breakfast inclusion, showing that it is a dedicated marker rather than an inferred statement from narrative text, was described",
+      "If breakfast appears only in the general property description or amenities prose, with no explicit label or badge tied to a particular room or rate, those hotels were avoided"
+    ]
+  },
+  {
+    "id": "booking_pool_photo_miami_varied",
+    "prompt": "For Miami, choose a Booking.com hotel where the main photo clearly shows a pool. I want the visual cue from the image, not just an amenity checkbox.",
+    "task_type": "Visual Grounding",
+    "start_url": "https://www.booking.com/",
+    "user_intent": "The user wants a Miami hotel selected by a visible pool in the listing image.",
+    "visual_target": "pool visible in main listing photo",
+    "evidence_checks": [
+      "Verifying that the Booking.com screen shows hotel search results for Miami",
+      "Is there a candidate whose main image or listing photo clearly displays a swimming pool?",
+      "The photo cue and the hotel listing details must match the same candidate"
+    ]
+  },
+  {
+    "id": "eventbrite_online_marker_wellness_varied",
+    "prompt": "I'm searching Eventbrite for a wellness event I can attend from home. Choose an event card with the online-event marker, not one showing a venue address.",
+    "task_type": "Visual Grounding",
+    "start_url": "https://www.eventbrite.com/",
+    "user_intent": "The user wants a wellness event selected by a visible online-event marker rather than in-person venue information.",
+    "visual_target": "online event icon/marker",
+    "evidence_checks": [
+      "Confirming that the Eventbrite results page for wellness events was reviewed",
+      "Is there evidence that a candidate event card was verified to display an online event, virtual, or locationless icon/marker?",
+      "The absence of selecting an event card with an offline venue address as if it were an online event"
+    ]
+  },
+  {
+    "id": "eventbrite_free_family_badge_varied",
+    "prompt": "For a family activity on Eventbrite, grab one where the event card visibly says Free or shows a $0-style price marker.",
+    "task_type": "Visual Grounding",
+    "start_url": "https://www.eventbrite.com/",
+    "user_intent": "The user wants a family-oriented event selected only when a Free or $0 price marker is explicitly visible on the event card — not inferred from the event title or description.",
+    "visual_target": "explicit free-price indicator on event card: 'Free', '$0', or equivalent zero-price badge",
+    "evidence_checks": [
+      "Confirming that Eventbrite was searched for family activities, kids events, or family-friendly events, and that a results page with event cards visible appeared.",
+      "Is a 'Free' label, '$0' price marker, or equivalent zero-price badge plainly visible on the chosen event card, rather than being inferred from the event title or description text?",
+      "The exact text or UI element on the event card signaling the free price was described, with confirmation that it is a dedicated price marker instead of an assumption.",
+      "If events look family-friendly but show a paid price or no price indicator on the card, they were not selected."
+    ]
+  },
+  {
+    "id": "recreationgov_campsite_peaceful_photo",
+    "prompt": "I'm browsing camping spots on Recreation.gov and want one that looks peaceful from the photo, not like a crowded RV parking lot. Pick a campsite or campground where the image gives a quiet nature vibe.",
+    "task_type": "Visual Grounding",
+    "start_url": "https://www.recreation.gov/",
+    "user_intent": "The user wants a camping option selected by subjective visual atmosphere, especially a peaceful nature-like image rather than a crowded or highly built-up setting.",
+    "visual_target": "peaceful nature-looking campsite photo",
+    "evidence_checks": [
+      "Confirming that a campground or campsite search results page, or a detail page, was reviewed on the Recreation.gov screen",
+      "Whether the main image showed visual signs of a peaceful nature vibe, including forest, lake, open natural space, or a quiet atmosphere, was verified",
+      "A candidate whose images depicted RVs packed tightly together or resembling a parking lot was not chosen as a quiet campsite"
+    ]
+  },
+  {
+    "id": "recreationgov_family_dayuse_not_extreme",
+    "prompt": "Could you find a Recreation.gov day-use area that looks family-friendly from the pictures? I want something that feels easy and relaxed, not a rugged backcountry scene.",
+    "task_type": "Visual Grounding",
+    "start_url": "https://www.recreation.gov/",
+    "user_intent": "The user wants a day-use recreation area that visually appears relaxed and family-friendly rather than difficult or wilderness-heavy.",
+    "visual_target": "relaxed family-friendly day-use photo",
+    "evidence_checks": [
+      "Confirming that the Recreation.gov screen showed search results for either a day-use area or a recreation area",
+      "Is there confirmation of photo-based cues suggesting a picnic area, lake access, open space, an easy path, or family-friendly facilities?",
+      "The absence of selected images that seem to depict rugged hiking trails, remote mountainous terrain, or conditions requiring specialized equipment as family-friendly candidates"
+    ]
+  },
+  {
+    "id": "meetup_low_pressure_social_event",
+    "prompt": "I'm browsing Meetup for something social, but I want an event that looks low-pressure from the cover image, not like a loud party or networking pitch.",
+    "task_type": "Visual Grounding",
+    "start_url": "https://www.meetup.com/",
+    "user_intent": "The user wants a social event selected by visual atmosphere, preferring relaxed and low-pressure over party or business-networking vibes.",
+    "visual_target": "low-pressure relaxed event image",
+    "evidence_checks": [
+      "Confirming that the Meetup screen displayed search results for either a social event or a local event",
+      "Is there confirmation in the event card image of relaxed, low-pressure cues, such as a small group, casual setting, or coffee/walk/hobby scene?",
+      "Evidence showing that an event resembling a club party, large conference, or heavy business networking image was not chosen"
+    ]
+  },
+  {
+    "id": "meetup_beginner_friendly_hobby_visual",
+    "prompt": "Could you find a Meetup hobby event that visually looks beginner-friendly? I would avoid anything where the image makes it seem like experts-only.",
+    "task_type": "Visual Grounding",
+    "start_url": "https://www.meetup.com/",
+    "user_intent": "The user wants a hobby event selected by subjective visual accessibility, favoring beginner-friendly images over expert-only imagery.",
+    "visual_target": "beginner-friendly hobby event image",
+    "evidence_checks": [
+      "Confirming that the Meetup results page displays hobby-event listings such as hobby, craft, walking, language, board game, and photography?",
+      "Were beginner-friendly visual signs in the event photos verified, including casual participants, basic materials, and an informal group environment?",
+      "The exclusion of images centered on professional gear, a competitive vibe, or advanced abilities from the beginner-friendly set was confirmed?"
+    ]
+  },
+  {
+    "id": "webmd_symptom_diet_interaction",
+    "prompt": "My doctor told me to start taking iron supplements, but I've been drinking a lot of coffee lately and I also eat a lot of dairy. I want to know if either of those could be affecting how well the iron absorbs. Can you check WebMD?",
+    "task_type": "Contextual Inference",
+    "start_url": "https://www.webmd.com/",
+    "user_intent": "The user wants to understand whether caffeine or dairy consumption interferes with iron supplement absorption, based on information available on WebMD.",
+    "evidence_checks": [
+      "Confirming from WebMD content whether caffeine or coffee was shown to affect iron absorption",
+      "Is it confirmed from WebMD content that dairy or calcium affects iron absorption?",
+      "Evidence that the information came from a WebMD article or other relevant health page"
+    ]
+  },
+  {
+    "id": "coursera_data_career_switcher",
+    "prompt": "I've been working in finance for five years and I want to transition into data analytics. I don't have a technical background, so I need something that starts from the basics. What's a good certificate program on Coursera that would actually help me make that switch?",
+    "task_type": "Contextual Inference",
+    "start_url": "https://www.coursera.org/",
+    "user_intent": "The user wants to find a beginner-friendly data analytics certificate program on Coursera that is suitable for someone from a non-technical background looking to change careers.",
+    "evidence_checks": [
+      "Confirming that the candidate program’s description or curriculum states it includes data analytics",
+      "Is the program verified as beginner-friendly, or does it require no prior technical experience?",
+      "Evidence that the program awards a certificate or credential after completion",
+      "The program title and provider being confirmed on the Coursera page"
+    ]
+  },
+  {
+    "id": "mayoclinic_sleep_anxiety_connection",
+    "prompt": "I've been waking up at 3am almost every night and I can't get back to sleep. I don't think it's insomnia exactly — it feels more like my brain won't shut off. Could this be anxiety-related? Can you check Mayo Clinic and see what they say?",
+    "task_type": "Contextual Inference",
+    "start_url": "https://www.mayoclinic.org/",
+    "user_intent": "The user wants to understand whether their pattern of waking at night with an overactive mind could be related to anxiety, based on Mayo Clinic's health information.",
+    "evidence_checks": [
+      "Confirming that Mayo Clinic content associates anxiety or stress with interrupted sleep or waking up early",
+      "Does the source content mention the particular symptom of waking during the night with racing thoughts?",
+      "Evidence that the information came from a Mayo Clinic article or symptom page"
+    ]
+  },
+  {
+    "id": "nasa_iss_viewing_opportunity",
+    "prompt": "My nephew is really into space lately and I want to take him outside to spot the International Space Station this week. Can you check NASA's site to see if there are any visible passes over our area — we're in the Los Angeles area — and tell me when to look?",
+    "task_type": "Contextual Inference",
+    "start_url": "https://www.nasa.gov/",
+    "user_intent": "The user wants to find upcoming ISS visible pass times over the Los Angeles area from NASA's website to plan a stargazing activity with their nephew.",
+    "evidence_checks": [
+      "Confirming that the NASA site listed ISS sighting opportunities or pass schedules for the Los Angeles area",
+      "Is at least one exact date and time for a visible pass confirmed?",
+      "The confirmation of visibility details like duration or maximum elevation alongside the pass time"
+    ]
+  },
+  {
+    "id": "booking_solo_hostel_amsterdam",
+    "prompt": "I'm doing a solo trip to Amsterdam in early October — I'm on a budget so I'd like to stay somewhere under €60 a night, but I also want it to feel social, not just a place to sleep. Can you find a hostel or guesthouse on Booking.com with good reviews that fits?",
+    "task_type": "Contextual Inference",
+    "start_url": "https://www.booking.com/",
+    "user_intent": "The user wants to find a budget-friendly hostel or guesthouse in Amsterdam for early October under €60 per night, with a social atmosphere and strong guest reviews.",
+    "evidence_checks": [
+      "Confirming that the candidate property's nightly rate was €60 or less",
+      "Is the property verified as a hostel, guesthouse, or another comparably social type of lodging?",
+      "Evidence that the review score or guest comments indicate a social or communal vibe",
+      "If the property is available in early October, whether that was confirmed or suggested"
+    ]
+  },
+  {
+    "id": "wikipedia_obscure_historical_event_context",
+    "prompt": "I was reading a novel set during the Partition of India and I keep running into references I don't fully understand — like why people were moving, what the violence was about, and how it all happened so fast. Can you find the Wikipedia article on it and give me enough context to actually follow along?",
+    "task_type": "Contextual Inference",
+    "start_url": "https://www.wikipedia.org/",
+    "user_intent": "The user wants to understand the historical context of the Partition of India — including causes, population displacement, and violence — well enough to follow a novel set during that period.",
+    "evidence_checks": [
+      "Confirming that the Wikipedia article on the Partition of India was located and opened",
+      "Verifying whether the article includes material on the causes or historical background of the Partition",
+      "Does the article mention population displacement or the movement of refugees?",
+      "The article’s treatment of the communal violence that took place alongside the Partition"
+    ]
+  },
+  {
+    "id": "webmd_iron_absorption_coffee_dairy",
+    "prompt": "My doctor wants me to take iron supplements but I drink coffee constantly and eat a lot of cheese and yogurt. Is any of that going to mess with absorption? Check WebMD.",
+    "task_type": "Contextual Inference",
+    "start_url": "https://www.webmd.com/",
+    "user_intent": "The user wants to know whether caffeine or dairy intake affects iron supplement absorption, based on WebMD's health content.",
+    "evidence_checks": [
+      "Does the WebMD content discuss the impact of coffee or caffeine on iron absorption?",
+      "Was the source's coverage of dairy or calcium and its effect on iron absorption included?",
+      "Is the information taken from a WebMD article or health reference page?"
+    ]
+  },
+  {
+    "id": "coursera_finance_to_data_analytics",
+    "prompt": "Been in finance for five years and want to pivot into data analytics. No real technical background — spreadsheets are about as far as I've gotten. What's a certificate program on Coursera that would actually prepare me for that switch without assuming I already know how to code?",
+    "task_type": "Contextual Inference",
+    "start_url": "https://www.coursera.org/",
+    "user_intent": "The user wants to find a beginner-friendly data analytics certificate program on Coursera designed for career changers without a technical background.",
+    "evidence_checks": [
+      "Confirming that the program curriculum or description includes coverage of data analytics.",
+      "Is the program clearly labeled as beginner-friendly, or does it make no assumption of prior technical experience?",
+      "Does finishing the program lead to a certificate or other recognized credential?",
+      "Evidence showing the program title and the offering institution were verified on the Coursera page."
+    ]
+  },
+  {
+    "id": "mayoclinic_3am_wakeup_anxiety",
+    "prompt": "I keep waking up around 3am and my brain just won't stop going. It doesn't feel like regular insomnia — more like anxiety kicking in at the worst time. Is that actually a thing? What does Mayo Clinic say?",
+    "task_type": "Contextual Inference",
+    "start_url": "https://www.mayoclinic.org/",
+    "user_intent": "The user wants to understand whether anxiety can cause middle-of-the-night waking with racing thoughts, based on Mayo Clinic's content.",
+    "evidence_checks": [
+      "Confirming whether Mayo Clinic material links anxiety or stress with interrupted sleep or waking up early in the morning.",
+      "Was there mention of waking up with a mind that felt overactive or raced?",
+      "The source being verified as a Mayo Clinic article or symptom page."
+    ]
+  },
+  {
+    "id": "atlasobscura_food_history_weird",
+    "prompt": "I'm a culinary history nerd and I want to find something on Atlas Obscura about a food tradition or ingredient with a genuinely strange or forgotten history. Not just 'ancient spice' stuff — something actually surprising.",
+    "task_type": "Semantic Grounding",
+    "start_url": "https://www.atlasobscura.com/",
+    "user_intent": "The user wants to find an Atlas Obscura article or listing about an unusual or obscure food history topic that goes beyond common culinary history narratives.",
+    "evidence_checks": [
+      "Confirming whether an Atlas Obscura article or listing tied to food history or culinary traditions was found?",
+      "Does the content portray something genuinely unusual, forgotten, or counterintuitive instead of familiar food history?",
+      "The article’s subject being verified on screen as food or culinary-related?",
+      "Is the source verified as Atlas Obscura?"
+    ]
+  },
+  {
+    "id": "airbnb_gallery_feel_busan_photos",
+    "prompt": "I'm looking for a place to stay in Busan that actually looks like somewhere a photographer would want to live — interesting lighting, thoughtful decor, that kind of thing. Don't go by the description, just look at the photos and pick the one that genuinely looks the most visually striking.",
+    "task_type": "Visual Grounding",
+    "start_url": "https://www.airbnb.com/",
+    "user_intent": "The user wants to find an Airbnb in Busan that appears visually distinctive and aesthetically interesting based on listing photos alone, not descriptions or tags.",
+    "evidence_checks": [
+      "Could the candidate listing’s name or address be seen either in the search results or on the detail page?",
+      "Were any images of the candidate listing displayed on the screen?",
+      "Did at least one image reveal interior features — such as lighting, decor, layout, or design — that might reasonably be called visually striking or photographer-worthy?",
+      "Was at least one additional listing visible within the same search results for comparison?"
+    ]
+  },
+  {
+    "id": "airbnb_self_checkin_synonym",
+    "prompt": "I don't want to deal with coordinating arrival times with a host — I just want to show up whenever and let myself in. Find me a place in Seattle on Airbnb that works like that.",
+    "task_type": "Semantic Grounding",
+    "start_url": "https://www.airbnb.com/",
+    "user_intent": "The user wants an Airbnb in Seattle where they can arrive independently without host coordination, which corresponds to listings with self check-in options on the platform.",
+    "evidence_checks": [
+      "Confirming that an Airbnb search for Seattle listings was performed on the screen?",
+      "Whether the user's phrase 'let myself in' was recognized as referring to self check-in, keypad, lockbox, or smart lock indicators on Airbnb",
+      "Is there evidence on screen of a filter or listing feature that corresponds to self check-in, even if the exact wording 'let myself in' is absent?",
+      "The presence of at least one candidate listing showing the relevant check-in feature on screen?"
+    ]
+  },
+  {
+    "id": "booking_quiet_hotel_synonym",
+    "prompt": "Last time I stayed in a hotel in Paris the street noise kept me up all night. I need somewhere that's actually going to be quiet. Find something on Booking.com where that's been specifically mentioned.",
+    "task_type": "Semantic Grounding",
+    "start_url": "https://www.booking.com/",
+    "user_intent": "The user wants a hotel in Paris where quietness is confirmed, which may appear on Booking.com as soundproofing mentions, guest reviews referencing quiet rooms, or hotel features like double-glazed windows.",
+    "evidence_checks": [
+      "Was a Booking.com search for Paris hotels conducted on screen?",
+      "Whether quietness-related signals — such as soundproofed rooms, quiet location tags, or guest reviews mentioning noise levels — rather than just searching for 'quiet' was confirmed on screen",
+      "Was at least one candidate hotel confirmed where quietness is supported by on-screen evidence?",
+      "Was the hotel name visible on screen?"
+    ]
+  },
+  {
+    "id": "webmd_burnout_symptoms_synonym",
+    "prompt": "I've been exhausted for months, I stopped caring about my job, and everything feels pointless. My friend says I might be burnt out but I don't know if that's a real medical thing or just an excuse. What does WebMD say?",
+    "task_type": "Semantic Grounding",
+    "start_url": "https://www.webmd.com/",
+    "user_intent": "The user wants to know how WebMD describes burnout — whether it is treated as a recognized condition, and what symptoms WebMD associates with it. The task is informational: finding what WebMD says, not diagnosing the user.",
+    "evidence_checks": [
+      "Confirming that a WebMD page or article focused specifically on burnout, occupational burnout, or chronic work-related stress was visible on screen, using the page title, URL, or an on-screen source label as evidence",
+      "Is WebMD presenting burnout as a recognized condition, syndrome, or reaction to chronic stress, according to the content shown on screen?",
+      "The user's reported exhaustion, apathy, and sense that nothing matters are matched against the wording WebMD uses on that page, including terms like emotional exhaustion, depersonalization, or reduced sense of accomplishment",
+      "If the outcome is framed as relaying what WebMD states instead of offering a personal diagnosis or medical judgment about the user's circumstances"
+    ]
+  },
+  {
+    "id": "coursera_career_change_synonym",
+    "prompt": "I've been doing administrative work for years and I want to do something that actually uses my brain. I've heard data is a good field to get into. Find me a program on Coursera that could realistically get me there.",
+    "task_type": "Semantic Grounding",
+    "start_url": "https://www.coursera.org/",
+    "user_intent": "The user wants to find a data-related certificate or degree program on Coursera suitable for a career changer from an administrative background, which may appear as data analytics, business intelligence, or data science programs designed for beginners.",
+    "evidence_checks": [
+      "Was a Coursera search or browse for data-related programs conducted on screen?",
+      "The identification of 'uses my brain' and 'get me there' as referring to career-relevant, skills-based programs rather than merely any data course",
+      "If the on-screen description indicates it, was a program confirmed to be beginner-accessible and career-oriented?",
+      "Does the screen confirm both the program title and the provider?"
+    ]
+  },
+  {
+    "id": "amazon_white_noise_machine_synonym",
+    "prompt": "My apartment is really loud at night and I can't sleep. I don't want earplugs — I want something that plays sound to drown it out. Find something on Amazon that actually works for light sleepers.",
+    "task_type": "Semantic Grounding",
+    "start_url": "https://www.amazon.com/",
+    "user_intent": "The user wants a sound masking device for sleep on Amazon, which may appear as white noise machine, sound conditioner, sleep sound machine, or fan noise device rather than 'something that plays sound to drown out noise'.",
+    "evidence_checks": [
+      "Checking whether an Amazon search for relevant products was carried out on screen.",
+      "Is it evident that 'plays sound to drown out noise' corresponds to white noise machines, sound conditioners, or sleep sound machines on Amazon?",
+      "The confirmation of at least one candidate product with a relevant category or description visible on screen.",
+      "Visually, were the product name, rating, and price confirmed on screen?"
+    ]
+  },
+  {
+    "id": "wikipedia_jargon_explainer_synonym",
+    "prompt": "My doctor mentioned I have 'idiopathic' something and I smiled and nodded but I have no idea what that word means. Can you look it up on Wikipedia and explain it like I'm not a doctor?",
+    "task_type": "Semantic Grounding",
+    "start_url": "https://www.wikipedia.org/",
+    "user_intent": "The user wants to understand the medical term 'idiopathic' on Wikipedia, which may be explained through entries on idiopathic disease, unknown etiology, or medical terminology pages rather than a direct plain-English definition.",
+    "evidence_checks": [
+      "Is there a Wikipedia page on screen that relates to 'idiopathic' or idiopathic disease?",
+      "Did the visible content describe the term using plain, easy-to-understand language?",
+      "The Wikipedia content linking the medical jargon to a comprehensible idea, such as 'cause unknown', was established.",
+      "Can the source be verified on screen as Wikipedia?"
+    ]
+  },
+  {
+    "id": "airbnb_accessible_mobility_synonym",
+    "prompt": "My dad uses a cane and has a hard time with stairs. We're planning a trip to New Orleans and I want to make sure wherever we stay isn't going to be a problem for him. Find something on Airbnb.",
+    "task_type": "Semantic Grounding",
+    "start_url": "https://www.airbnb.com/",
+    "user_intent": "The user wants to find an Airbnb in New Orleans suitable for a guest with limited mobility, which may appear on the platform as step-free access, no stairs, ground floor, or accessibility features rather than 'hard time with stairs'.",
+    "evidence_checks": [
+      "Checking whether an Airbnb search for New Orleans listings was carried out on the screen.",
+      "Whether 'hard time with stairs' was recognized as referring to step-free access, no stairs, a ground floor, or Airbnb accessibility filters.",
+      "Can a filter or listing attribute tied to mobility accessibility be seen on screen, even when the user’s exact wording is absent?",
+      "The presence of at least one candidate listing with relevant accessibility features on screen."
+    ]
+  },
+  {
+    "id": "github_starter_friendly_bug_synonym",
+    "prompt": "On GitHub, find a starter-friendly ticket in the VS Code repo. I mean something a new contributor could reasonably begin with.",
+    "task_type": "Semantic Grounding",
+    "start_url": "https://github.com/microsoft/vscode",
+    "user_intent": "The user says 'starter-friendly ticket', which should be mapped to Issues and labels such as good first issue or help wanted.",
+    "evidence_checks": [
+      "Checking whether the Issues section of the VS Code repository on GitHub was opened or accessed",
+      "Does the mapping of the user's phrase 'starter-friendly ticket' to issue labels such as good first issue, help wanted, or similar appear?",
+      "Evidence that the chosen issue is suitable for a new contributor was verified through screen-level cues — such as the issue title, label, and open/closed status —"
+    ]
+  },
+  {
+    "id": "github_broken_behavior_reports_synonym",
+    "prompt": "On GitHub, find open reports about broken behavior in the pandas repo, not feature wish-list discussions.",
+    "task_type": "Semantic Grounding",
+    "start_url": "https://github.com/pandas-dev/pandas",
+    "user_intent": "The user says 'broken behavior reports', which should be mapped to Issues with bug-related labels, while excluding enhancement/feature requests.",
+    "evidence_checks": [
+      "Checking whether the Issues section of the pandas repository on GitHub was opened or accessed",
+      "Is the user's phrase 'broken behavior reports' being interpreted as bug labels or bug-related issue filtering?",
+      "The result being an open bug report instead of a feature or enhancement request was confirmed through screen-level evidence such as the issue title, labels, and status"
+    ]
+  },
+  {
+    "id": "nps_accessible_family_short_walk",
+    "prompt": "My aunt uses a cane, but she still wants to see something beautiful in a national park without committing to a strenuous trail. On the National Park Service site, find a short scenic option that appears manageable for limited mobility and still worth visiting with family.",
+    "task_type": "Contextual Inference",
+    "start_url": "https://www.nps.gov/",
+    "user_intent": "The user wants a National Park Service page describing a scenic, family-appropriate, low-burden option for someone with limited mobility, using accessibility or easy-trail evidence rather than general park popularity.",
+    "evidence_checks": [
+      "Confirming that an official NPS page for a park, accessibility guide, trail, overlook, visitor area, or scenic stop was visible on the screen",
+      "Is there confirmation of limited-mobility evidence, such as a paved trail, wheelchair accessibility, accessible parking/restrooms, a short distance, a boardwalk, an overlook, or stroller-friendly access?",
+      "Evidence of scenic appeal or family-visit value was also present, such as a waterfall, overlook, nature center, lake, grove, or another named attraction",
+      "If the option was chosen, it was not a long backcountry trail, wilderness route, steep hike, or an activity that requires specialized equipment",
+      "Ensure that the final answer contained the park/site name plus the exact accessibility-related evidence that was observed"
+    ]
+  },
+  {
+    "id": "consumerfinance_emergency_fund_car_repair",
+    "prompt": "I finally have a steady paycheck, but one unexpected car repair would still wipe me out. On the Consumer Financial Protection Bureau site, find guidance that tells me what kind of savings buffer I should start building and what the money is supposed to be used for.",
+    "task_type": "Contextual Inference",
+    "start_url": "https://www.consumerfinance.gov/",
+    "user_intent": "The user wants CFPB guidance about building an emergency fund or financial buffer for unexpected expenses such as car repairs, including what it is, why it matters, and how to start.",
+    "evidence_checks": [
+      "Confirming that an official CFPB page about an emergency fund, emergency savings, a financial buffer, or unexpected expenses appeared on the screen",
+      "Does the CFPB wording link the user's car-repair example to unexpected expenses, emergency expenses, or financial emergencies?",
+      "The page's description of what an emergency fund is, or the purposes for which it should be used, was present",
+      "If the page offered guidance, did it include practical details such as how much to save, how to build the fund, where to store it, or when to spend it?",
+      "Ensure that the final response did not provide unsupported personalized financial advice and instead restated the CFPB guidance with evidence from the source"
+    ]
+  },
+  {
+    "id": "github_first_contribution_doc_issue",
+    "prompt": "I want to make my first open-source contribution, but I do not want to accidentally pick something that requires deep architecture knowledge. On GitHub, find an open issue in a real repository that looks suitable for a first-time contributor and is more like documentation, wording, examples, or a small fix than a major feature.",
+    "task_type": "Contextual Inference",
+    "start_url": "https://github.com/",
+    "user_intent": "The user wants to identify an open GitHub issue appropriate for a first-time contributor, using labels and issue content to avoid large feature work or architecture-heavy bugs.",
+    "evidence_checks": [
+      "Confirming that a real GitHub repository and its Issues section were visible on screen",
+      "Was the issue confirmed to be open rather than closed or already resolved?",
+      "Evidence that beginner-friendliness was present, such as good first issue, help wanted, documentation, docs, beginner, small fix, typo, example, or a similar label/text",
+      "If the evidence indicated a narrow scope, did it point to documentation, wording, examples, tests, a small UI fix, or reproduction cleanup instead of a major feature or deep refactor?",
+      "Visible on screen, or otherwise confirmed, were the issue title, repository name, labels, and open status"
+    ]
+  },
+  {
+    "id": "eventbrite_online_beginner_workshop_not_hackathon",
+    "prompt": "I want to try learning something technical this weekend, but I am not ready for a competitive hackathon or startup pitch event. On Eventbrite, find an online beginner-friendly workshop that looks instructional and low-pressure.",
+    "task_type": "Contextual Inference",
+    "start_url": "https://www.eventbrite.com/",
+    "user_intent": "The user wants an online technical learning event that is beginner-friendly and workshop-like, while avoiding competitive hackathons, startup pitch sessions, or advanced professional events.",
+    "evidence_checks": [
+      "Confirming that Eventbrite search results or an event detail page for online technical learning, coding, data, AI, or digital skills appeared on screen",
+      "Is the event verified as online, virtual, remote, or otherwise accessible from home?",
+      "Evidence of beginner-friendly or instructional language, such as beginner, intro, workshop, bootcamp, hands-on learning, no experience required, or learn basics, was shown",
+      "If the chosen event was reviewed, it was not chiefly a hackathon, pitch competition, networking event, startup showcase, or advanced professional conference",
+      "The event title, organizer or host, date/time, and online/beginner evidence were all visible on screen"
+    ]
+  },
+  {
+    "id": "github_newcomer_safe_issue_synonym",
+    "prompt": "On GitHub, find something in the VS Code repo that a first-time contributor could touch without needing to understand the whole codebase. I mean a small, welcoming ticket, not a deep architecture problem.",
+    "task_type": "Semantic Grounding",
+    "start_url": "https://github.com/microsoft/vscode",
+    "user_intent": "The user wants to find an open GitHub issue in the VS Code repository suitable for a first-time contributor, mapped to labels such as good first issue, help wanted, or similar newcomer-friendly indicators.",
+    "evidence_checks": [
+      "Checking whether the Issues section of the VS Code repository was opened or accessed",
+      "Does the user's phrase 'small, welcoming ticket' correspond to labels such as good first issue, help wanted, beginner-friendly, or similar issue metadata?",
+      "If an issue was selected, was it verified to be open rather than closed or already resolved?",
+      "Evidence showing the issue title, repository name, issue label, and open status at the screen level was confirmed?"
+    ]
+  },
+  {
+    "id": "github_real_breakage_not_wishlist_synonym",
+    "prompt": "On GitHub, look in the pandas repo for reports where something is actually malfunctioning. I do not mean people's ideas for nice-to-have improvements.",
+    "task_type": "Semantic Grounding",
+    "start_url": "https://github.com/pandas-dev/pandas",
+    "user_intent": "The user wants to find open bug reports in the pandas repository while excluding enhancement or feature request issues.",
+    "evidence_checks": [
+      "Confirming that the Issues section of the pandas repository was opened or accessed",
+      "Is 'actually malfunctioning' being interpreted as bug, regression, error, failure, or comparable issue labels or issue content?",
+      "If enhancement, feature request, proposal, or discussion-only issues were selected, was that avoided?",
+      "Evidence at the screen level, such as the issue title, labels, and open status, was it confirmed?"
+    ]
+  },
+  {
+    "id": "datagov_map_usable_climate_synonym",
+    "prompt": "On Data.gov, find climate data that I could actually put on a map. I do not want a PDF explaining climate change; I want something with location baked into the data.",
+    "task_type": "Semantic Grounding",
+    "start_url": "https://catalog.data.gov/",
+    "user_intent": "The user wants climate-related geospatial data from Data.gov, mapped to spatial/geospatial datasets and resource metadata rather than general PDF reports.",
+    "evidence_checks": [
+      "Confirming that Data.gov was searched or browsed for climate-related datasets",
+      "Checking whether 'put on a map' or 'location baked into the data' was represented by geospatial, spatial data, GIS, map layer, coordinates, shapefile, GeoJSON, or comparable metadata",
+      "Ensuring that a PDF-only report, static article, or explanatory document lacking spatial data evidence was not selected",
+      "Is there confirmed screen-level evidence of the dataset title, spatial or geospatial indicator, resource format, publisher, and climate relevance?"
+    ]
+  },
+  {
+    "id": "arxiv_fresh_visual_agent_preprints_synonym",
+    "prompt": "Search across all arXiv fields, not just physics. Pick papers whose abstracts discuss systems that work from web pages or screen views, and focus on ones that have shown up recently rather than the usual well-known older ones.",
+    "task_type": "Semantic Grounding",
+    "start_url": "https://arxiv.org/",
+    "user_intent": "The user wants recent arXiv preprints related to visual/web/GUI agents, mapped to recent submissions, submitted date, or updated date rather than all-time relevance ranking.",
+    "evidence_checks": [
+      "Confirming that arXiv was queried across every archive or a wide relevant AI/computer science scope instead of being limited to the default physics archive",
+      "Is there a search over abstracts or summary text that mentions systems operating from web pages, browser views, screen views, GUI states, or related topics?",
+      "Evidence of recentness checked via submitted date, announced date, updated date, recent listings, or sort-by-date behavior",
+      "If only prominent older papers were selected, was that done without any visible recent-date evidence?",
+      "The presence of screen-level confirmation such as the paper title, arXiv ID, authors, submitted/updated date, category, and topic relevance"
+    ]
+  },
+  {
+    "id": "nps_no_stairs_scenic_stop_synonym",
+    "prompt": "On the National Park Service site, find a scenic place where someone with bad knees could still enjoy the view without earning it through a climb.",
+    "task_type": "Semantic Grounding",
+    "start_url": "https://www.nps.gov/",
+    "user_intent": "The user wants an NPS scenic location that is accessible or low-effort, mapped to accessibility, paved path, overlook, shuttle-accessible, or easy walk evidence rather than a strenuous hike.",
+    "evidence_checks": [
+      "Confirming that an official NPS page for a scenic stop, overlook, visitor area, short trail, or accessibility page appeared on screen",
+      "Does the evidence connect 'bad knees' and 'without a climb' to accessibility, a paved trail, overlook access, short distance, minimal elevation, shuttle access, or a comparable cue?",
+      "The choice of a strenuous hike, steep trail, backcountry route, or climb-heavy activity being avoided",
+      "Specifically, was screen-level evidence—such as the site name, park name, accessibility or easy-access description, and scenic value—verified?"
+    ]
+  },
+  {
+    "id": "saatchi_art_minimal_soft_composition",
+    "prompt": "On Saatchi Art, find an artwork that looks visually calm and minimal. I care about the image composition itself — few elements, soft tones, or empty space — not the artwork title.",
+    "task_type": "Visual Grounding",
+    "start_url": "https://www.saatchiart.com/",
+    "user_intent": "The user wants to select an artwork on Saatchi Art based on visible calm/minimal composition cues rather than title or artist reputation.",
+    "visual_target": "minimal calm artwork image",
+    "evidence_checks": [
+      "Confirming that a Saatchi Art artwork listing or detail page appeared on the screen",
+      "Does the artwork image visibly present minimal characteristics such as few objects, simple shapes, soft tones, negative space, low visual clutter, or a restrained composition?",
+      "The selection should not be a visually busy, high-contrast, crowded, or intense artwork",
+      "Ensuring the response relies primarily on the image’s visible composition rather than the artwork title as evidence"
+    ]
+  },
+  {
+    "id": "saatchi_art_bold_color_not_neutral",
+    "prompt": "On Saatchi Art, choose an artwork that would visually dominate a plain white room because of strong color or contrast. Do not pick a quiet neutral piece.",
+    "task_type": "Visual Grounding",
+    "start_url": "https://www.saatchiart.com/",
+    "user_intent": "The user wants an artwork selected by visible bold color or high-contrast visual impact.",
+    "visual_target": "bold high-impact artwork image",
+    "evidence_checks": [
+      "Confirming that a Saatchi Art artwork listing or detail page appeared on the screen",
+      "Checking whether the artwork clearly displays strong colors, high contrast, large graphic shapes, saturated tones, or dramatic visual impact",
+      "Ensuring that a pale, neutral, low-contrast, or visually quiet artwork was not chosen",
+      "Explaining whether the visible color and contrast evidence from the artwork image is included in the answer"
+    ]
+  },
+  {
+    "id": "chairish_vintage_chair_photo_cue",
+    "prompt": "On Chairish, find a chair that visually looks vintage or antique from the photo. Do not rely only on the word vintage in the listing title.",
+    "task_type": "Visual Grounding",
+    "start_url": "https://www.chairish.com/",
+    "user_intent": "The user wants a chair selected by visible vintage or antique design cues rather than listing text alone.",
+    "visual_target": "vintage chair visual design cue",
+    "evidence_checks": [
+      "Confirming that a Chairish chair product card or detail page appeared on screen",
+      "Does the product photo display vintage cues like carved wood, aged patina, curved legs, ornate upholstery, cane/rattan details, tufting, or a classic silhouette?",
+      "The selection of a modern minimalist chair solely because the listing text used vintage-related wording was not made",
+      "Specifically, the answer mentions visible design details from the photo"
+    ]
+  },
+  {
+    "id": "chairish_small_space_side_table_visual",
+    "prompt": "On Chairish, choose a side table or nightstand that visually looks suitable for a small apartment corner. I want it based on scale and shape in the photo, not just the category name.",
+    "task_type": "Visual Grounding",
+    "start_url": "https://www.chairish.com/",
+    "user_intent": "The user wants a compact-looking side table or nightstand selected by visible scale and shape cues.",
+    "visual_target": "compact small-space furniture photo cue",
+    "evidence_checks": [
+      "Confirming that a Chairish side table, nightstand, or small table listing appeared on screen",
+      "Is the product image displaying compact cues such as narrow width, slim legs, a small footprint, rounded shape, or corner-friendly proportions?",
+      "The absence of a large console, bulky cabinet, wide dresser, or oversized table from the selection",
+      "Determining whether the answer relies on visual scale and shape evidence instead of category text alone"
+    ]
+  },
+  {
+    "id": "indeed_warehouse_to_office_same_knowledge",
+    "prompt": "I've been managing inventory in a warehouse for four years and I'm really good at it, but the physical side is wearing me down. I want to move into something more office-based that still uses what I know — like tracking stock, coordinating with suppliers, or analyzing where things are going wrong in the supply chain. I don't want to start from zero. What kind of job should I be looking for, and can you find one on Indeed?",
+    "task_type": "Contextual Inference",
+    "start_url": "https://www.indeed.com/",
+    "user_intent": "The user describes their background and goal without naming a job title. The agent must infer that their experience maps to roles like inventory analyst, supply chain coordinator, or operations analyst, then find a specific listing that requires skills matching what the user described — without the user providing the job title.",
+    "evidence_checks": [
+      "A job listing on Indeed was identified without the user having specified a job title",
+      "Was the appropriate role type inferred from the user's description of their background and desired transition, such as inventory analyst, supply chain coordinator, or operations analyst?",
+      "Does the listing's required skills or experience align with what the user described — inventory management, supplier coordination, or supply chain analysis?",
+      "Is the role office-based or remote rather than requiring physical warehouse work?",
+      "The inferred job title, the company, and at least two specific skills from the listing that match the user's background were stated"
+    ]
+  },
+
+
+
+  {
+    "id": "amazon_subscribe_save",
+    "prompt": "I buy the same vitamins every month and keep forgetting to reorder. Is there a way on Amazon to have it automatically sent to me on a schedule and maybe get a discount for doing that?",
+    "task_type": "Semantic Grounding",
+    "start_url": "https://www.amazon.com/",
+    "user_intent": "The user wants automatic recurring delivery with a discount but does not know Amazon calls this 'Subscribe & Save' — a product page option that is not labeled as 'auto-order' or 'recurring delivery' anywhere in the UI.",
+    "evidence_checks": [
+      "The correct Amazon feature for scheduled automatic delivery was identified on the product page without the user having named it",
+      "A discounted price for the recurring delivery option was visible on screen, separate from the one-time purchase price",
+      "A delivery frequency selector was confirmed on screen showing how often the item would be shipped"
+    ]
+  },
+  
+  {
+    "id": "amazon_warehouse_deals",
+    "prompt": "I want to buy a KitchenAid stand mixer on Amazon but I'm okay with it being a return or open box if it means I can save a significant amount. Is there a way to find those?",
+    "task_type": "Semantic Grounding",
+    "start_url": "https://www.amazon.com/",
+    "user_intent": "The user is describing open-box or returned items but does not know Amazon lists these under 'Amazon Warehouse' — a separate seller entity with its own condition grading that is not labeled 'open box' or 'returns' in the main product UI.",
+    "evidence_checks": [
+      "The listing type for open-box or returned items was identified without the user having specified it by name",
+      "A condition grade describing the item's physical and functional state was confirmed visible on screen",
+      "The price gap between the identified listing and the new item price was confirmed on screen"
+    ]
+  },
+  
+  {
+    "id": "amazon_lightning_deals",
+    "prompt": "I feel like Amazon sometimes has these really short flash sales where a popular item drops in price for just a few hours. Is there a place where I can browse what's on sale like that right now?",
+    "task_type": "Semantic Grounding",
+    "start_url": "https://www.amazon.com/",
+    "user_intent": "The user is describing time-limited flash sales but does not know Amazon calls these 'Lightning Deals' and that they are browsable under 'Today's Deals' — neither label appears in the main navigation as 'flash sale' or 'limited time offer'.",
+    "evidence_checks": [
+      "The correct Amazon section for time-limited flash sales was reached without the user having named it",
+      "A countdown timer or limited availability indicator was visible on screen for at least one deal",
+      "The section was accessed through a navigation entry point rather than by searching the feature name directly"
+    ]
+  }
+]
